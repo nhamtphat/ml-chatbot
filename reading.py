@@ -58,13 +58,17 @@ def bow(sentence, words, show_details=False):
 context = {}
 
 ERROR_THRESHOLD = 0.25
+SENSITIVITY = 0.3
+DO_NOT_UNDERSTAND = "I don't understand the question, can you be more specific?"
+
 def classify(sentence):
     results = model.predict([bow(sentence, words)])[0]
     results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
     for r in results:
-        return_list.append((classes[r[0]], r[1]))
+        if r[1] > SENSITIVITY:
+            return_list.append((classes[r[0]], r[1]))
     return return_list
 
 def response(sentence, userID='2', show_details=False):
@@ -79,6 +83,7 @@ def response(sentence, userID='2', show_details=False):
                     if not 'context_filter' in i or \
                         (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
-                        return (random.choice(i['responses']))
-
+                        return random.choice(i['responses'])
             results.pop(0)
+    else:
+        return DO_NOT_UNDERSTAND
