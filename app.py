@@ -7,6 +7,10 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/", methods = ['GET'])
+def index():
+    return "Servcer is running"
+
 @app.route("/", methods = ['POST'])
 def hello():
     data = json.loads(request.data)
