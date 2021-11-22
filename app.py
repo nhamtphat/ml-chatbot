@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     return "Servcer is running"
 
-@app.route("/", methods = ['POST'])
+@app.route("/chat", methods = ['GET'])
 def chat():
     data = request.json
     message = data['message']
