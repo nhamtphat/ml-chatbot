@@ -9,13 +9,15 @@ app = Flask(__name__)
 
 @app.route("/", methods = ['GET'])
 def index():
-    return "Servcer is running"
+    return "Server is running"
 
 @app.route("/", methods = ['POST'])
-def hello():
+def chat():
     data = json.loads(request.data)
     message = data['message']
     return {'set_attributes': {'response': reading.response(message)}}
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+
+
