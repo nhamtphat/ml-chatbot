@@ -7,7 +7,10 @@
                 "How are you",
                 "Is anyone there?",
                 "Hello",
-                "Good day"
+                "Good day",
+                "Hello bot",
+                "Are you there",
+                "Nice to meet you"
             ],
             "responses": [
                 "Hello, thanks for visiting",
@@ -33,7 +36,10 @@
             "patterns": [
                 "Thanks",
                 "Thank you",
-                "That's helpful"
+                "That's helpful",
+                "thank you for your help",
+                "that a greate idea",
+                "that a good idea"
             ],
             "responses": [
                 "Your welcome!",
@@ -48,8 +54,9 @@
             ],
             "responses": [
                 "Sorry, can't understand you",
-                "Please give me more info",
-                "Not sure I understand"
+                "Sorry, i don't know about your question, please try another",
+                "Not sure I understand, please try another question",
+                "Oh no, I'm not trained to answer this question"
             ]
         },
         {
@@ -57,10 +64,12 @@
             "patterns": [
                 "What you can do?",
                 "What do you doing?",
-                "help"
+                "help",
+                "how you can help me",
+                ""
             ],
             "responses": [
-                "I can help you suggest places",
+                "I can help you suggest a destination for your travel",
                 "Tell me your preferences, and I'll suggest places to visit"
             ]
         },
@@ -70,10 +79,12 @@
                 "suggest tourist for me",
                 "I want to find a tourist destination",
                 "find a destination",
-                "find tourist"
+                "find tourist",
+                "I want to find a destination",
+                "suggest me a place for this summer"
             ],
             "responses": [
-                "Let's see, tell me a place you want to visit, like mountains, sea or culture?"
+                "Let answer some questions, tell me a place you want to visit, like mountains, sea or culture?"
             ]
         },
         {
@@ -82,7 +93,11 @@
                 "i want to go to a sea",
                 "beach is good",
                 "go to the beach",
-                "suggest me a beach"
+                "suggest me a beach",
+                "I want go to a beach",
+                "Some where have beach",
+                "I like swimming",
+                "a beach is greate"
             ],
             "responses": [
                 "The sea is so great, do you want to go with friends, family or lover?"
@@ -121,7 +136,13 @@
                 "I want go with my friend",
                 "classmate",
                 "roommate",
-                "My colleagues"
+                "My colleagues",
+                "i will go with my friend",
+                "i will go with my friends",
+                "friends",
+                "friend",
+                "colleague",
+                "i want go with my collegue"
             ],
             "responses": [
                 "You must be a great friend. Wait me a second..."
@@ -135,7 +156,10 @@
                 "with my parents",
                 "with my wife",
                 "with my husband",
-                "with my childs"
+                "with my childs",
+                "i want to go with my family",
+                "i go with my husband",
+                "i will go with my wife"
             ],
             "responses": [
                 "You are a family person. Wait me a second, I am finding for you..."
@@ -146,8 +170,12 @@
             "tag": "lover",
             "patterns": [
                 "I want go with lover",
-                "girlfriend",
+                "i will go with my girlfriend",
+                "i will travel with my lover",
+                "i go with my girlfriend",
+                "i go with my boy friend",
                 "boyfriend",
+                "girlfriend",
                 "with my partner"
             ],
             "responses": [
