@@ -13,7 +13,7 @@ def index():
 
 @app.route("/chat", methods = ['GET'])
 def chat():
-    data = request.json
+    data = request.args
     message = data['message']
     userId = data['user_id']
     return {'set_attributes': {'response': reading.response(message, userId)}}
