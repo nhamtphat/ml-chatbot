@@ -136,6 +136,7 @@ def predict_destination(userID):
         return -1
     for row in datas_file['destinations']:
         if array_diff(row['tags'], context[userID]):
+            context[userID] = []
             return row['desciption']
     return -1
     
