@@ -6,6 +6,7 @@ stemmer = LancasterStemmer()
 
 import numpy as np
 import random
+import json
 
 from tensorflow import keras
 
@@ -14,7 +15,6 @@ model = keras.models.load_model('model_ChatBot.h5')
 intents_file = './travel-suggest-intents.json'
 
 # import our chat-bot intents file
-import json
 with open(intents_file) as json_data:
     intents = json.load(json_data)
 
@@ -90,7 +90,7 @@ def classify(sentence):
     # return tuple of intent and probability
     return return_list
 
-def response(sentence, userID, show_details=False):
+def response(sentence, userID, show_details=True):
     results = classify(sentence)
     # print('Result:',results)
     # print('context:',context)
@@ -113,5 +113,40 @@ def response(sentence, userID, show_details=False):
                         (userID in context and 'context_filter' in intent and intent['context_filter'] in context[userID]):
                         if show_details: print ('tag:', intent['tag'])
                         # a random response from the intent
-                        return (random.choice(intent['responses']))
+                        response = (random.choice(intent['responses']))
+                        # if response call a run:
+                        # if response.find('run:') != -1:
+                        #     destination = eval(response[4:] + "('" + userID + "')")
+                        # else:
+                        #     return response
+                        destination = predict_destination(userID)
+                        if destination != -1:
+                            return destination
+                        else:
+                            return response
             results.pop(0)
+    
+#--------------------------
+# FIND DESTINATION
+#-------------------------- 
+datas_file = './destination_data.json'
+
+# import our chat-bot intents file
+with open(datas_file) as json_data:
+    datas_file = json.load(json_data)
+    
+def predict_destination(userID):
+    if userID not in context:
+        return -1
+    print("tagggggggggggg: ", context[userID])
+    for row in datas_file['destinations']:
+        if array_diff(row['tags'], context[userID]):
+            return row['desciption']
+    return -1
+    
+
+def array_diff(arr1, arr2):
+    for elm in arr1:
+        if elm not in arr2:
+            return False
+    return True

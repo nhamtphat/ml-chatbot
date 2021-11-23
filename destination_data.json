@@ -1,0 +1,16 @@
+{
+    "destinations": [
+        {
+            "tags": ["beach", "family"],
+            "desciption": "To most tourists in Vietnam travel, Vung Tau is one of the most interesting destinations and loved for its extensive beaches. Tourists always prefer sightseeing at Front Beach (Bãi Trước) and going swimming in Back Beach (Bãi Sau)."
+        },
+        {
+            "tags": ["beach", "friend"],
+            "desciption": "Occupying a perfect position – a feng shui masterpiece of land, water, and wind – in the southwestern corner of the country, Ha Tien is the most attractive place to be in Vietnam’s Mekong Delta region. Among its many charms, Ha Tien receives a cooling breeze off the sea, river, and hills throughout the day."
+        },
+        {
+            "tags": ["beach", "lover"],
+            "desciption": "Nha Trang beach city is well known for its pristine beaches and excellent scuba diving and is fast becoming a popular destination for international tourists, attracting large numbers of backpackers as well as more affluent travelers on the Southeast Asia circuit. It is already very popular with Vietnamese tourists. Nha Trang Bay is widely considered as amongst the world's most beautiful bays."
+        }
+    ]
+}

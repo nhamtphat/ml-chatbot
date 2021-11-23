@@ -110,7 +110,9 @@
                 "i want to go to a mountain",
                 "mountain",
                 "valley",
-                "i want to go mountain climbing"
+                "i want to go mountain climbing",
+                "i will to go to a hill",
+                "i wild hill will be greate"
             ],
             "responses": [
                 "Climbing this season will be great, do you want to go with friends, family or lover?"
@@ -145,7 +147,7 @@
                 "i want go with my collegue"
             ],
             "responses": [
-                "You must be a great friend. Wait me a second..."
+                "You must be a great friend."
             ],
             "context_set": "friends"
         },
@@ -162,7 +164,7 @@
                 "i will go with my wife"
             ],
             "responses": [
-                "You are a family person. Wait me a second, I am finding for you..."
+                "You are a family man. You want to go to a beach, a mountain or culture site?"
             ],
             "context_set": "family"
         },
@@ -179,7 +181,7 @@
                 "with my partner"
             ],
             "responses": [
-                "I'm looking for a romantic evening for you. Wait a sec..."
+                "I'm looking for a romantic evening for you. Please tell me know, what you want to find? A beach or a hill?"
             ],
             "context_set": "lover"
         }
