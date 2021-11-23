@@ -114,11 +114,7 @@ def response(sentence, userID, show_details=True):
                         if show_details: print ('tag:', intent['tag'])
                         # a random response from the intent
                         response = (random.choice(intent['responses']))
-                        # if response call a run:
-                        # if response.find('run:') != -1:
-                        #     destination = eval(response[4:] + "('" + userID + "')")
-                        # else:
-                        #     return response
+                        # get a suggest, if have a suggest, suggest it
                         destination = predict_destination(userID)
                         if destination != -1:
                             return destination
@@ -138,7 +134,6 @@ with open(datas_file) as json_data:
 def predict_destination(userID):
     if userID not in context:
         return -1
-    print("tagggggggggggg: ", context[userID])
     for row in datas_file['destinations']:
         if array_diff(row['tags'], context[userID]):
             return row['desciption']
