@@ -1,0 +1,40 @@
+{
+    "destinations": [
+        {
+            "tags": ["beach", "family"],
+            "desciption": "To most tourists in Vietnam travel, Vung Tau is one of the most interesting destinations and loved for its extensive beaches. Tourists always prefer sightseeing at Front Beach (Bãi Trước) and going swimming in Back Beach (Bãi Sau)."
+        },
+        {
+            "tags": ["beach", "friend"],
+            "desciption": "Occupying a perfect position – a feng shui masterpiece of land, water, and wind – in the southwestern corner of the country, Ha Tien is the most attractive place to be in Vietnam’s Mekong Delta region. Among its many charms, Ha Tien receives a cooling breeze off the sea, river, and hills throughout the day."
+        },
+        {
+            "tags": ["beach", "lover"],
+            "desciption": "Nha Trang beach city is well known for its pristine beaches and excellent scuba diving and is fast becoming a popular destination for international tourists, attracting large numbers of backpackers as well as more affluent travelers on the Southeast Asia circuit. It is already very popular with Vietnamese tourists. Nha Trang Bay is widely considered as amongst the world's most beautiful bays."
+        },
+        {
+            "tags": ["mountain", "family"],
+            "desciption": "Ba Den Mountain (Black Virgin Mountain or Nui Ba Den in Vietnamese) is suitable for those who love outdoor activities and want to escape from the hustle and bustle of big cities. Together with Nui Heo (Pig Mountain), Nui Phung (Phoenix Mountain), Nui Ba Den (Black Virgin Mountain) are parts of Nui Ba Historical and Cultural Complex."
+        },
+        {
+            "tags": ["mountain", "friend"],
+            "desciption": "Sam mountain is about 6km to the west of Chau Doc Town, and at the height of 230m with beautiful landscapes and many historic remains. On the way to the foot of mountain, there are rice paddy fields stretching along the road’s two sides. The mountain is mainly well-known as a sacred place for Buddhists with dozens of pagodas and temples."
+        },
+        {
+            "tags": ["mountain", "lover"],
+            "desciption": "Dalat or Da Lat is the capital city of Lam Dong province, Vietnam. Da Lat is the City of Flowers and honeymooners with lovely French villas, the fresh air, the beautiful waterfalls and gorgeous lakes sits in a lush and green valley of postcard beauty."
+        },
+        {
+            "tags": ["culture", "family"],
+            "desciption": "The tunnel network of Cu Chi became legendary during the 1960s for facilitating VC control of a large rural area only 30km to 40km from HCMC. At its peak, the tunnel system stretched from the South Vietnamese capital to the Cambodian border; in the district of Cu Chi alone more than 250km of tunnels honeycomb the ground."
+        },
+        {
+            "tags": ["culture", "friend"],
+            "desciption": "Sam mountain is about 6km to the west of Chau Doc Town, and at the height of 230m with beautiful landscapes and many historic remains. On the way to the foot of mountain, there are rice paddy fields stretching along the road’s two sides. The mountain is mainly well-known as a sacred place for Buddhists with dozens of pagodas and temples."
+        },
+        {
+            "tags": ["culture", "lover"],
+            "desciption": "Hoi An Viet Nam is located in Quang Nam province, Central Vietnam. Peaceful and ancient, Hoi An is one of the most famous tourist destinations in the Central Vietnam that attracts not only domestic tourists but also tourists all over the continents. In 1999, Hoi An Vietnam was even recognized by UNESCO as World Heritage Site. This article will be a Hoi An reviews so that you can understand more why Hoi An Viet Nam is such a famous place."
+        }
+    ]
+}
