@@ -90,7 +90,7 @@ def classify(sentence):
     # return tuple of intent and probability
     return return_list
 
-def response(sentence, userID, show_details=True):
+def response(sentence, userID, show_details=False):
     results = classify(sentence)
     # print('Result:',results)
     # print('context:',context)
@@ -133,6 +133,8 @@ with open(datas_file) as json_data:
     
 def predict_destination(userID):
     if userID in context:
+        print ('User ID:', userID)
+        print ('User context:', context[userID])
         for row in datas_file['destinations']:
             if array_diff(row['tags'], context[userID]):
                 context[userID] = []
