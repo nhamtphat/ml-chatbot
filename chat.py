@@ -7,6 +7,6 @@ def chat():
 		if inp.lower() == "quit":
 			break
 
-		print(reading.response(inp))
+		print(reading.response(inp, 1))
 
 chat()

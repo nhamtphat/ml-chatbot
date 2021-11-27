@@ -4,6 +4,7 @@ nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
+import pandas as pd
 import numpy as np
 import random
 import json
@@ -12,28 +13,24 @@ from tensorflow import keras
 
 model = keras.models.load_model('model_ChatBot.h5')
 
-intents_file = './data/travel-suggest-intents.json'
-
 # import our chat-bot intents file
-with open(intents_file) as json_data:
-    intents = json.load(json_data)
+intents = pd.read_csv("./data/travel-suggest-intents.csv")
 
 words = []
 classes = []
 documents = []
 ignore_words = ['?', '!']
 # loop through each sentence in our intents patterns
-for intent in intents['intents']:
-    for pattern in intent['patterns']:
-        # tokenize each word in the sentence
-        w = nltk.word_tokenize(pattern)
-        # add to our words list
-        words.extend(w)
-        # add to documents in our corpus
-        documents.append((w, intent['tag']))
-        # add to our classes list
-        if intent['tag'] not in classes:
-            classes.append(intent['tag'])
+for index, intent in intents.iterrows():
+      # tokenize each word in the sentence
+      w = nltk.word_tokenize(intent['intent'])
+      # add to our words list
+      words.extend(w)
+      # add to documents in our corpus
+      documents.append((w, intent['tag']))
+      # add to our classes list
+      if intent['tag'] not in classes:
+          classes.append(intent['tag'])
 
 # stem and lower each word and remove duplicates
 words = [stemmer.stem(w.lower()) for w in words if w not in ignore_words]
@@ -90,30 +87,32 @@ def classify(sentence):
     # return tuple of intent and probability
     return return_list
 
+reponses_file = './data/travel-suggest-reponses.json'
+
+# import our chat-bot reponses file
+with open(reponses_file) as json_data:
+    reponses = json.load(json_data)
+
 def response(sentence, userID, show_details=False):
     results = classify(sentence)
-    # print('Result:',results)
-    # print('context:',context)
+    # Print detail
+    if show_details: print('Classify result:', results)        
     # if we have a classification then find the matching intent tag
     if results:
+        classified_tag = results[0][0]
+        if userID not in context: context[userID] = []
+        if classified_tag not in context[userID]: context[userID].append(classified_tag)
+        if show_details: print('User\'s tags:', context[userID])
         # loop as long as there are matches to process
         while results:
-            for intent in intents['intents']:
+            for row in reponses['data_set']:
                 # find a tag matching the first result
-                if intent['tag'] == results[0][0]:
-                    # set context for this intent if necessary
-                    if 'context_set' in intent:
-                        if show_details: print ('context:', intent['context_set'])
-                        if userID not in context:
-                            context[userID] = []
-                        context[userID].append(intent['context_set'])
-                        
+                if row['tag'] == classified_tag:
                     # check if this intent is contextual and applies to this user's conversation
-                    if not 'context_filter' in intent or \
-                        (userID in context and 'context_filter' in intent and intent['context_filter'] in context[userID]):
-                        if show_details: print ('tag:', intent['tag'])
+                    if not 'context_filter' in row or \
+                        (userID in context and 'context_filter' in row and row['context_filter'] in context[userID]):
                         # a random response from the intent
-                        response = (random.choice(intent['responses']))
+                        response = (random.choice(row['responses']))
                         # get a suggest, if have a suggest, suggest it
                         destination = predict_destination(userID)
                         if destination != -1:
@@ -121,7 +120,7 @@ def response(sentence, userID, show_details=False):
                         else:
                             return response
             results.pop(0)
-    
+
 #--------------------------
 # FIND DESTINATION
 #-------------------------- 

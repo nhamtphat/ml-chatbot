@@ -1,0 +1,72 @@
+intent,tag
+Hi,greeting
+How are you,greeting
+Is anyone there,greeting
+Hello,greeting
+Good day,greeting
+Hello bot,greeting
+Are you there,greeting
+Nice to meet you,greeting
+Bye,goodbye
+See you later,goodbye
+Goodbye,goodbye
+Thanks,thanks
+Thank you,thanks
+That's helpful,thanks
+thank you for your help,thanks
+that a greate idea,thanks
+that a good idea,thanks
+What you can do,help
+What do you doing,help
+help,help
+how you can help me,help
+suggest tourist for me,suggest
+I want to find a tourist destination,suggest
+find a destination,suggest
+find tourist,suggest
+I want to find a destination,suggest
+suggest me a place for this summer,suggest
+i want to go to a sea,beach
+beach is good,beach
+go to the beach,beach
+suggest me a beach,beach
+I want go to a beach,beach
+Some where have beach,beach
+I like swimming,beach
+a beach is greate,beach
+i want to go to a mountain,mountain
+mountain,mountain
+valley,mountain
+i want to go mountain climbing,mountain
+i will to go to a hill,mountain
+i wild hill will be greate,mountain
+I want to visit famous places,culture
+famous place,culture
+historical sites,culture
+cultural sites,culture
+I want go with my friend,friends
+classmate,friends
+roommate,friends
+My colleagues,friends
+i will go with my friend,friends
+i will go with my friends,friends
+friends,friends
+friend,friends
+colleague,friends
+i want go with my collegue,friends
+I want go with my family,family
+with my parents,family
+with my wife,family
+with my husband,family
+with my childs,family
+i want to go with my family,family
+i go with my husband,family
+i will go with my wife,family
+I want go with lover,lover
+i will go with my girlfriend,lover
+i will travel with my lover,lover
+i go with my girlfriend,lover
+"i go with my boy friend""",lover
+boyfriend,lover
+girlfriend,lover
+with my partner,lover
